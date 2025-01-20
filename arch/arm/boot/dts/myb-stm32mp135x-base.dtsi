@@ -341,6 +341,10 @@
 
 		phy0_eth1: ethernet-phy@0 {
 			//compatible = "ethernet-phy-id0007.c131";
+			compatible = "ethernet-phy-id0007.c130";
+			reset-gpios = <&gpioa 6 GPIO_ACTIVE_LOW | GPIO_PULL_UP>  
+            reset-assert-us = <1000>;
+            reset-deassert-us = <2000>;
 			//reset-gpios =  <&mcp23017 9 GPIO_ACTIVE_LOW>;
 			reg = <0>;
 			//wakeup-source;
