@@ -29,7 +29,8 @@
 	};
 };
 
-&i2c3{
+//&i2c3{
+&i2c4{
 		sii902x: sii902x@39 {
 		compatible = "sil,sii9022";
 		reg = <0x39>;
@@ -44,7 +45,8 @@
 		cvcc12-supply = <&v1v2_hdmi>;
 		interrupts = <0 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-parent = <&gpioi>;
-		reset-gpios = <&gpioa 11 GPIO_ACTIVE_LOW>;
+		//reset-gpios = <&gpioa 11 GPIO_ACTIVE_LOW>;
+		reset-gpios = <&gpioa 10 GPIO_ACTIVE_LOW>;
 		status = "okay";
 
 		ports {

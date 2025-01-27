@@ -574,10 +574,13 @@
 	st,no-lsfs-sc;
 };
 
-&i2c3 {
+//&i2c3 {
+&i2c4 {
 	pinctrl-names = "default", "sleep";
-	pinctrl-0 = <&i2c3_pins_a>;
-	pinctrl-1 = <&i2c3_sleep_pins_a>;
+	//pinctrl-0 = <&i2c3_pins_a>;
+	//pinctrl-1 = <&i2c3_sleep_pins_a>;
+	pinctrl-0 = <&i2c4_pins_a>;
+	pinctrl-1 = <&i2c4_sleep_pins_a>;
 	i2c-scl-rising-time-ns = <300>;
 	i2c-scl-falling-time-ns = <300>;
 	clock-frequency = <100000>;
