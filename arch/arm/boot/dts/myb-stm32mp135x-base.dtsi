@@ -379,10 +379,15 @@
 
 &i2c1 {
 	pinctrl-names = "default", "sleep";
-	i2c-scl-rising-time-ns = <96>;
-	i2c-scl-falling-time-ns = <3>;
-	clock-frequency = <1000000>;
-	status = "disabled";
+	pinctrl-0 = <&i2c1_pins_a>;
+	pinctrl-1 = <&i2c1_sleep_pins_a>;
+	//i2c-scl-rising-time-ns = <96>;
+	//i2c-scl-falling-time-ns = <3>;
+	//clock-frequency = <1000000>;
+	i2c-scl-rising-time-ns = <170>;
+	i2c-scl-falling-time-ns = <5>;
+	clock-frequency = <400000>;
+	status = "okay";
 	/* spare dmas for other usage */
 	/delete-property/dmas;
 	/delete-property/dma-names;
@@ -507,8 +512,13 @@
 
 &usart2 {
 	pinctrl-names = "default", "sleep", "idle";
+	pinctrl-0 = <&uart2_pins_a>;
+	pinctrl-1 = <&uart2_sleep_pins_a>;
+	pinctrl-2 = <&uart2_idle_pins_a>;
+	/delete-property/dmas;
+	/delete-property/dma-names;
 	uart-has-rtscts;
-	status = "disabled";
+	status = "okay";
 };
 
 &usbh_ehci {
