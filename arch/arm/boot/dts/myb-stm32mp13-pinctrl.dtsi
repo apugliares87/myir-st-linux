@@ -9,8 +9,8 @@
 
 	adc1_usb_cc_pins_a: adc1-usb-cc-pins-0 {
 		pins {
-			pinmux = <STM32_PINMUX('A', 5, ANALOG)>, /* ADC1 in2 */
-				<STM32_PINMUX('F', 11, ANALOG)>; /* ADC1 in8 */
+			pinmux = <STM32_PINMUX('A', 5, ANALOG)>; /* ADC1 in2 */
+				//<STM32_PINMUX('F', 11, ANALOG)>; /* ADC1 in8 */
 		};
 	};
 
@@ -21,11 +21,11 @@
 				<STM32_PINMUX('H', 14, AF13)>, 	 /* DCMPIPP_D2*/
 				<STM32_PINMUX('E', 4, AF13)>, 	 /* DCMPIPP_D3 */
 				<STM32_PINMUX('E', 13, AF13)>, 	 /* DCMPIPP_D4 */
-				<STM32_PINMUX('D', 3, AF13)>, 	 /* DCMPIPP_D5 */
+				//<STM32_PINMUX('D', 3, AF13)>, 	 /* DCMPIPP_D5 */
 				<STM32_PINMUX('B', 8, AF13)>, 	 /* DCMPIPP_D6 */
 				<STM32_PINMUX('E', 9, AF13)>, 	 /* DCMPIPP_D7 */
 				<STM32_PINMUX('B', 7, AF14)>, 	 /* DCMPIPP_PIXCLK */
-				<STM32_PINMUX('G', 9, AF13)>, 	 /* DCMPIPP_VSYNC */
+				//<STM32_PINMUX('G', 9, AF13)>, 	 /* DCMPIPP_VSYNC */
 				<STM32_PINMUX('H', 8, AF13)>; 	 /* DCMPIPP_HSYNC */
 		};
 	};
@@ -37,11 +37,11 @@
 				<STM32_PINMUX('H', 14, ANALOG)>, 	 /* DCMPIPP_D2*/
 				<STM32_PINMUX('E', 4, ANALOG)>, 	 /* DCMPIPP_D3 */
 				<STM32_PINMUX('E', 13, ANALOG)>, 	 /* DCMPIPP_D4 */
-				<STM32_PINMUX('D', 3, ANALOG)>, 	 /* DCMPIPP_D5 */
+				//<STM32_PINMUX('D', 3, ANALOG)>, 	 /* DCMPIPP_D5 */
 				<STM32_PINMUX('B', 8, ANALOG)>, 	 /* DCMPIPP_D6 */
 				<STM32_PINMUX('E', 9, ANALOG)>, 	 /* DCMPIPP_D7 */
 				<STM32_PINMUX('B', 7, ANALOG)>, 	 /* DCMPIPP_PIXCLK */
-				<STM32_PINMUX('G', 9, ANALOG)>, 	 /* DCMPIPP_VS */
+				//<STM32_PINMUX('G', 9, ANALOG)>, 	 /* DCMPIPP_VS */
 				<STM32_PINMUX('H', 8, ANALOG)>; 	 /* DCMPIPP_HS */
 		};
 	};
@@ -272,8 +272,8 @@
 		pins {
 			pinmux = <STM32_PINMUX('A', 4, AF12)>, /* SAI1_SCK_A */
 				 //<STM32_PINMUX('A', 0, AF6)>, /* SAI1_SD_B */
-				 <STM32_PINMUX('A', 5, AF6)>, /* SAI1_SD_A */
-				 <STM32_PINMUX('F', 11, AF6)>; /* SAI1_FS_A */
+				 <STM32_PINMUX('A', 5, AF6)>; /* SAI1_SD_A */
+				 //<STM32_PINMUX('F', 11, AF6)>; /* SAI1_FS_A */
 			slew-rate = <0>;
 			drive-push-pull;
 			bias-disable;
@@ -284,8 +284,8 @@
 		pins {
 			pinmux = <STM32_PINMUX('A', 4, ANALOG)>, /* SAI1_SCK_A */
 				 //<STM32_PINMUX('A', 0, ANALOG)>, /* SAI1_SD_B */
-				 <STM32_PINMUX('A', 5, ANALOG)>, /* SAI1_SD_A */
-				 <STM32_PINMUX('F', 11, ANALOG)>; /* SAI1_FS_A */
+				 <STM32_PINMUX('A', 5, ANALOG)>; /* SAI1_SD_A */
+				 //<STM32_PINMUX('F', 11, ANALOG)>; /* SAI1_FS_A */
 		};
 	};
 
@@ -413,7 +413,7 @@
 	//uart2 to External
 	uart2_pins_a: uart2-0 {
 		pins1 {
-			pinmux = <STM32_PINMUX('D', 4, AF3)>, /* UART2_DE */
+			pinmux = //<STM32_PINMUX('D', 4, AF3)>, /* UART2_DE */
 				<STM32_PINMUX('F', 11, AF1)>; /* UART2_TX */
 			bias-disable;
 			drive-push-pull;
@@ -427,7 +427,7 @@
 
 	uart2_idle_pins_a: uart2-idle-0 {
 		pins1 {
-			pinmux = <STM32_PINMUX('D', 4, AF3)>, /* UART2_DE */
+			pinmux = //<STM32_PINMUX('D', 4, AF3)>, /* UART2_DE */
 				<STM32_PINMUX('F', 11, ANALOG)>; /* UART2_TX */
 		};
 		pins2 {
@@ -438,7 +438,7 @@
 
 	uart2_sleep_pins_a: uart2-sleep-0 {
 		pins {
-			pinmux = <STM32_PINMUX('D', 4, ANALOG)>, /* UART2_DE */
+			pinmux = //<STM32_PINMUX('D', 4, ANALOG)>, /* UART2_DE */
 			    <STM32_PINMUX('H', 8, ANALOG)>,  /* UART2_RX */
 				<STM32_PINMUX('F', 11, ANALOG)>; /* UART2_TX */
 		};

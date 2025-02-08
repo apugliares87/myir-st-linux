@@ -354,7 +354,7 @@
 };
 
 &eth2 {
-	status = "okay";
+	status = "disabled";
 	pinctrl-0 = <&eth2_rmii_pins_a>;
 	pinctrl-1 = <&eth2_rmii_sleep_pins_a>;
 	pinctrl-names = "default", "sleep";
@@ -518,7 +518,9 @@
 	pinctrl-2 = <&uart2_idle_pins_a>;
 	/delete-property/dmas;
 	/delete-property/dma-names;
-	uart-has-rtscts;
+	//uart-has-rtscts;
+	rts-gpios = <&gpiog 9 GPIO_ACTIVE_HIGH>;
+	linux,rs485-enabled-at-boot-time;
 	status = "okay";
 };
 
@@ -635,7 +637,7 @@
 		clock-names = "xvclk";
 		DOVDD-supply = <&v2v8>;
 		powerdown-gpios = <&gpioc 13 (GPIO_ACTIVE_HIGH | GPIO_PUSH_PULL)>;
-		reset-gpios = <&gpiog 8 (GPIO_ACTIVE_LOW | GPIO_PUSH_PULL)>;
+		//reset-gpios = <&gpiog 8 (GPIO_ACTIVE_LOW | GPIO_PUSH_PULL)>;
 		// rotation = <180>;
 		status = "okay";
 			port {
