@@ -524,11 +524,20 @@
 	status = "okay";
 };
 
+
+/*
 &usbh_ehci {
 	phys = <&usbphyc_port0>;
 	status = "okay";
 };
+*/
 
+&usbh_ehci {
+	phys = <&usbphyc_port1 1>;
+	status = "okay";
+};
+
+/*
 &usbotg_hs {
 	phys = <&usbphyc_port1 0>;
 	phy-names = "usb2-phy";
@@ -545,6 +554,7 @@
 		};
 	};
 };
+*/
 
 &usbphyc {
 	status = "okay";
