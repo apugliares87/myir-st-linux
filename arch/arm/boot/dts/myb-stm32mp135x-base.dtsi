@@ -519,8 +519,8 @@
 	/delete-property/dmas;
 	/delete-property/dma-names;
 	//uart-has-rtscts;
-	rts-gpios = <&gpiog 9 GPIO_ACTIVE_HIGH>;
-	linux,rs485-enabled-at-boot-time;
+	//rts-gpios = <&gpiog 9 GPIO_ACTIVE_HIGH>;
+	//linux,rs485-enabled-at-boot-time;
 	status = "okay";
 };
 
